@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Learning Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+</head>
+<body>
+    <div id="login">
+        <h2>Welcome to the Chess Learning Game!</h2>
+        <button onclick="showStudentOptions()">Start Learning Chess</button>
+    </div>
+
+    <div id="game-options" style="display: none;">
+        <h3>Select Your Chess Learning Experience</h3>
+        <button onclick="startChessLevel('beginner')">Beginner Level</button>
+        <button onclick="startChessLevel('intermediate')">Intermediate Level</button>
+        <button onclick="startChessLevel('advanced')">Advanced Level</button>
+        <button onclick="playScenario()">Play a Chess Scenario</button>
+        <button onclick="playAgainstAI()">Play Against AI</button>
+    </div>
+
+    <div id="chessboard-container" style="display: none;">
+        <h4>Chessboard Area</h4>
+        <div id="chessboard" style="width: 400px"></div>
+        <button onclick="endGame()">End Game</button>
+    </div>
+
+    <script src="chess.js"></script>
+</body>
+</html>
